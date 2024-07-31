@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Music Mixer</title>
+</head>
+<body>
+    <h1 class="visually-hidden">Live Music</h1>
+    <header class="grid-container" id="header">
+        <div id="logo" class="box span-12">
+            <img src="images/20240730_133109.png" alt="Music logo" draggable="false">
+        </div>
+    </header>
+
+    <main class="grid-container">
+        <section class="box span-12" id="main-content">
+            <h2>Welcome to the Live Music Show!</h2>
+            <p>Play and Enjoy the amazing sound of <span>Music!</span></p>
+
+                <section id="bottom-buttons" class="box span-12">
+                    <h2 class="visually-hidden">Control Buttons</h2>
+                    <div >
+                        <div id="add-btn">
+                            <img src="images/plus.png" alt="plus button" draggable="false">
+                        </div>
+                        <div id="sound-btn">
+                            <img src="images/sound.png" alt="sound button" draggable="false">
+                        </div>
+                        <div id="minus-btn">
+                            <img src="images/Minus.png" alt="deduce button" draggable="false">
+                        </div>
+                        <div id="reset-btn">
+                            <img src="images/reset.png" alt="reset button" draggable="false">
+                        </div>
+                        <div id="play-btn">
+                            <img src="images/play.png" alt="play button" draggable="false">
+                        </div>
+                        <div id="pause-btn">
+                            <img src="images/pause.png" alt="pause button" draggable="false">
+                        </div>
+                        <div id="stop-btn">
+                            <img src="images/stop.png" alt="stop button" draggable="false">
+                        </div>
+                    </div>
+                </section>
+                <section id="top-buttons" class="span-12">
+                    <h3 class="visually-hidden">Like & Dislike Buttons</h3>
+                    <p>Choose your music by cliking on the LIke or dislike icon.</p>
+                    <div id="like-btn">
+                        <img src="images/like.png" alt="like button" draggable="false">
+                        <audio id="likeAudio" src="sounds/like.mp3"></audio>
+                    </div>
+                    <div id="dislike-btn">
+                        <img src="images/dislike.png" alt="dislike button" draggable="false">
+                        <audio id="dislikeAudio" src="sounds/dislike.mp3"></audio>
+                    </div>
+                </section>
+            </section>
+
+    </main>
+
+    <footer class="grid-container">
+        <h2 class="visually-hidden">Footer Information</h2>       
+        <div id="footer" class="span-12">
+            <p id="privacy-policy">©2024 Gregory & Sidhu. All Rights Reserved. <br> Privacy Policy</p>
+        </div>
+    </footer>
+   
+    <script src="js/main.js"></script>
+</body>
+</html>
