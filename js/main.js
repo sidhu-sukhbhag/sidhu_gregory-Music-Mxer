@@ -25,6 +25,7 @@ function pauseAudio() {
 }
 
 
+
 document.getElementById('like-btn').addEventListener('click', playLikeAudio);
 document.getElementById('dislike-btn').addEventListener('click', playDislikeAudio);
 
@@ -38,3 +39,18 @@ addBtn.addEventListener('click', () => {
   audio.play();
 });
 
+
+stopButton.addEventListener('click', () => {
+
+  if (!likeAudio.paused) {
+      likeAudio.pause();
+      likeAudio.currentTime = 0;
+  }
+
+  if (!dislikeAudio.paused) {
+      dislikeAudio.pause();
+      dislikeAudio.currentTime = 0;
+  }
+
+  console.log('Stop button clicked. All audio has been stopped and reset.');
+});
