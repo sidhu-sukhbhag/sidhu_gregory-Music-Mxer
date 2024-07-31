@@ -1,85 +1,40 @@
-console .log("Javascript file is linked")
+
+const likeAudio = document.getElementById('likeAudio');
+const dislikeAudio = document.getElementById('dislikeAudio');
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const addButton = document.getElementById('add-btn');
-    const soundButton = document.getElementById('sound-btn');
-    const minusButton = document.getElementById('minus-btn');
-    const resetButton = document.getElementById('reset-btn');
-    const playButton = document.getElementById('play-btn');
-    const pauseButton = document.getElementById('pause-btn');
-    const stopButton = document.getElementById('stop-btn');
+const playBtn = document.getElementById('play-btn');
+const pauseBtn = document.getElementById('pause-btn');
+playBtn.addEventListener('click', playLikeAudio);
+pauseBtn.addEventListener('click', pauseAudio);
 
-    const likeAudio = document.getElementById('likeAudio');
-    const dislikeAudio = document.getElementById('dislikeAudio');
 
-    const likeButton = document.getElementById('like-btn');
-    const dislikeButton = document.getElementById('dislike-btn');
+function playLikeAudio() {
+  likeAudio.play();
+}
 
-    likeButton.addEventListener('click', () => {
-        dislikeAudio.pause();
-        dislikeAudio.currentTime = 0;
-        likeAudio.play();
 
-         likeButton.classList.add('animate');
+function playDislikeAudio() {
+  dislikeAudio.play();
+}
 
-         likeButton.addEventListener('animationend', () => {
-             likeButton.classList.remove('animate');
-         }, { once: true });
-    });
 
-    dislikeButton.addEventListener('click', () => {
-        likeAudio.pause();
-        likeAudio.currentTime = 0;
-        dislikeAudio.play();
+function pauseAudio() {
+  likeAudio.pause();
+  dislikeAudio.pause();
+}
 
-         dislikeButton.classList.add('animate');
 
-         dislikeButton.addEventListener('animationend', () => {
-             dislikeButton.classList.remove('animate');
-         }, { once: true });
-    });
+document.getElementById('like-btn').addEventListener('click', playLikeAudio);
+document.getElementById('dislike-btn').addEventListener('click', playDislikeAudio);
 
-    playButton.addEventListener('click', () => {
-        if (likeAudio.paused && dislikeAudio.paused) {
-            likeAudio.play(); 
-        } else if (!likeAudio.paused) {
-            likeAudio.play();
-        } else if (!dislikeAudio.paused) {
-            dislikeAudio.play();
-        }
-    });
 
-    pauseButton.addEventListener('click', () => {
-        likeAudio.pause();
-        dislikeAudio.pause();
-    });
+const addBtn = document.getElementById('add-btn');
 
-    stopButton.addEventListener('click', () => {
-        likeAudio.pause();
-        likeAudio.currentTime = 0;
-        dislikeAudio.pause();
-        dislikeAudio.currentTime = 0;
-    });
 
-    addButton.addEventListener('click', () => {
-        console.log('Add button clicked.');
-    });
+addBtn.addEventListener('click', () => {
 
-    soundButton.addEventListener('click', () => {
-        console.log('Sound button clicked.');
-    });
-
-    minusButton.addEventListener('click', () => {
-        console.log('Minus button clicked.');
-    });
-
-    resetButton.addEventListener('click', () => {
-        likeAudio.pause();
-        likeAudio.currentTime = 0;
-        dislikeAudio.pause();
-        dislikeAudio.currentTime = 0;
-        console.log('Reset button clicked.');
-    });
+  const audio = new Audio('track 2.mp3');
+  audio.play();
 });
 
