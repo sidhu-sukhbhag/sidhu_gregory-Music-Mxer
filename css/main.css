@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color:lemonchiffon;
+    font-family: 'Averia Serif Libre', serif;
+}
+
+/* General Rules */
+
+img, embed, object, video, picture {
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5 {
+    line-height: 1.5;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: -2px;
+    text-shadow: 0px 3px hsl(0, 59%, 32%);
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+@media screen and (min-width: 400px) {
+    .header {
+        position: sticky;
+        background-image: url(../images/guitar-music-bokeh-flame.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    #logo img {
+        width: 50%;
+    }
+
+    #main-content {
+        background: url(../images/Music-bg-700.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+
+    #main-content p {
+        color: #fff;
+        font-family: "Shadows Into Light", cursive;
+        font-size: 20px;
+    }
+
+    #like-btn img, #dislike-btn img {
+        width: 60%;
+    }
+
+    #bottom-buttons img {
+        width: 30px;
+    }
+
+    #bottom-buttons {
+        margin: 20px;
+    }
+
+    #bottom-buttons{
+        display: grid;
+        row-gap: 50px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #header {
+        position: sticky;
+        background: url(../images/guitar-music-bokeh-flame.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    #logo img {
+        width: 35%;
+    }
+
+    #main-content {
+        background: url(../images/Music-bg-900.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #like-btn img, #dislike-btn img {
+        width: 30%;
+    }
+
+    #bottom-buttons img {
+        width: 60px;
+    }
+
+    #bottom-buttons {
+        margin: 20px;
+    }
+
+    
+    #bottom-buttons{
+        display: grid;
+        row-gap: 50px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #header {
+        position: sticky;
+        background: url(../images/guitar-music-bokeh-flame.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    #logo img {
+        width: 25%;
+    }
+
+    #main-content {
+        background: url(../images/Music-bg-1200.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #like-btn img, #dislike-btn img {
+        width: 20%;
+    }
+
+    #bottom-buttons img {
+        width: 100px;
+    }
+
+    #bottom-buttons {
+        margin: 20px;
+    }
+
+    
+    #bottom-buttons{
+        display: grid;
+        row-gap: 50px;
+    }
+}
+
+/* Footer */
+
+footer {
+    padding: 20px 0;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+#privacy-policy {
+    color: #bbb;
+    font-size: 14px;
+}
+
+#bottom-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    padding: 20px; 
+}
+
+#bottom-buttons div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+
+#top-buttons {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Centers the buttons vertically */
+    gap: 20px; /* Adds space between the buttons, adjust as needed */
+    padding: 20px; /* Optional: adds padding around the container */
+    background-color: #f0f0f0; /* Optional: background color for the container */
+}
+
+#top-buttons div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Optional: adds padding around each button */
+}
+
+#top-buttons img {
+    width: 50px; /* Adjust the size as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+
+#top-buttons p {
+    color: black;
+}
+
+
+#top-buttons div {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.animate {
+    animation: bounce 1s;
+}
+
+#logo img{
+    animation: fadeIn 1s;
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
