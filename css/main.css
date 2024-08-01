@@ -262,3 +262,52 @@ footer {
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
+
+
+#drop-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.drop-zone img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:400px; 
+    height: 400px; 
+}
+
+#baby-song {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#music-albums{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+#baby-song img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+#snake-song img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+#love-song img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
