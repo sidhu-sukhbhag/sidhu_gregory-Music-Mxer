@@ -311,3 +311,11 @@ footer {
     border-radius: 50%;
     object-fit: cover;
 }
+
+.dropped {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    opacity: 1;
+  }
